@@ -1,0 +1,13 @@
+version:4671
+
+enableVsync:false
+maxFps:260
+maxAnisotropyBit:0
+textureFiltering:0
+mipmapLevels:0
+vignette:false
+
+onboardAccessibility:false
+skipMultiplayerWarning:true
+tutorialStep:none
+joinedFirstServer:true
