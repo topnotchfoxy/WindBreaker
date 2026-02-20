@@ -1,11 +1,16 @@
 version:4671
 
+fov:0.5
+renderDistance:8
+simulationDistance:8
 enableVsync:false
 maxFps:260
 maxAnisotropyBit:0
 textureFiltering:0
 mipmapLevels:0
 vignette:false
+
+soundCategory_master:0.5
 
 onboardAccessibility:false
 skipMultiplayerWarning:true
