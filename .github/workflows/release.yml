@@ -9,7 +9,7 @@ jobs:
   release:
     strategy:
       matrix:
-        mc_version: ["1.20.1", "1.21.1", "1.21.8"]
+        mc_version: ["1.21.11"]
     runs-on: ubuntu-latest
     environment: github-actions
     permissions:
@@ -54,15 +54,9 @@ jobs:
           pushd Pakku/${{ matrix.mc_version}}
           PACK_VERSION=$(jq -r '.version' pakku.json)
           echo "PACK_VERSION=$PACK_VERSION" >> $GITHUB_ENV
-          wget https://github.com/juraj-hrivnak/Pakku/releases/download/v1.2.1/pakku.jar
+          wget https://github.com/juraj-hrivnak/Pakku/releases/download/v1.3.3/pakku.jar
           java -jar pakku.jar export
           popd
-      - name: Attest mrpack
-        id: attest-mrpack
-        if: env.changed == 'true'
-        uses: actions/attest-build-provenance@v1
-        with:
-          subject-path: ./Pakku/${{ matrix.mc_version}}/build/modrinth/*
       - name: Publish to Modrinth
         if: env.changed == 'true'
         uses: Kir-Antipov/mc-publish@v3.3
@@ -70,7 +64,7 @@ jobs:
           name: MC${{ matrix.mc_version}}-${{ env.PACK_VERSION }}
           modrinth-id: Er2bMzL7
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
-          files: ./Pakku/${{ matrix.mc_version}}/build/modrinth/TNVBP_Lite_MC${{ matrix.mc_version}}-${{ env.PACK_VERSION }}.mrpack
+          files: ./Pakku/${{ matrix.mc_version }}/build/modrinth/*.mrpack
           changelog: |
             ${{ env.commit_log }}
           loaders: fabric
