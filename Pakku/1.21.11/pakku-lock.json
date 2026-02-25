@@ -334,26 +334,27 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "iris-fabric-1.10.5+mc1.21.11.jar",
+                    "file_name": "iris-fabric-1.10.6+mc1.21.11.jar",
                     "mc_versions": [
                         "1.21.11"
                     ],
                     "loaders": [
-                        "fabric"
+                        "fabric",
+                        "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/ZQx4ktUs/iris-fabric-1.10.5+mc1.21.11.jar",
-                    "id": "ZQx4ktUs",
+                    "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/TSXvi2yD/iris-fabric-1.10.6+mc1.21.11.jar",
+                    "id": "TSXvi2yD",
                     "parent_id": "YL57xq9U",
                     "hashes": {
-                        "sha512": "e42a65e03c324c44847255e255dba4e75d65093bccd2b4e4804f297bf8505e218fbd5a600b8dda8fbe73229eb90ae710c7133e43aa2029b961a686600539ed79",
-                        "sha1": "8f56581bb74c845b702d07488cd9b8adffaae497"
+                        "sha512": "ca4d3c2a37c1206ac40a825f528dafeaae98bc7cb4d17f1e8b2d427df8b4b106790baaeda60a7d7462784661508fb8278074731a67224bba994a6b52672790a6",
+                        "sha1": "9a4dd8518bbad9e6be9edd443cfc6da74b1bb26b"
                     },
                     "required_dependencies": [
                         "AANobbMI"
                     ],
-                    "size": 2798880,
-                    "date_published": "2026-01-25T16:06:12.935757Z"
+                    "size": 2805791,
+                    "date_published": "2026-02-23T22:56:22.019933Z"
                 }
             ]
         },
@@ -537,24 +538,25 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "sodium-fabric-0.8.4+mc1.21.11.jar",
+                    "file_name": "sodium-fabric-0.8.6+mc1.21.11.jar",
                     "mc_versions": [
                         "1.21.11"
                     ],
                     "loaders": [
-                        "fabric"
+                        "fabric",
+                        "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/AANobbMI/versions/1OWNgWVR/sodium-fabric-0.8.4+mc1.21.11.jar",
-                    "id": "1OWNgWVR",
+                    "url": "https://cdn.modrinth.com/data/AANobbMI/versions/ZPWbiWXz/sodium-fabric-0.8.6+mc1.21.11.jar",
+                    "id": "ZPWbiWXz",
                     "parent_id": "AANobbMI",
                     "hashes": {
-                        "sha512": "c882e07f09ccc04b6258e79979a8e1429018de5b09da5fccea189d0a5de60ea5475f1884fc724f4d3ababc8abe730b9856d5e4864c3e418b21871dbaed21f0c3",
-                        "sha1": "c0a8ac43af978f8d8245bf033670944eb90d7b2e"
+                        "sha512": "55b5ade20dc70e8c9a0f7b6a8ba835d49efd3c4f8360869d6551f13e3a016c44dd78c5ecad638903172898154187726d429ad34a14cea30abfa8bd6d61eb6287",
+                        "sha1": "fa686304c63efea0456af91a0b6352f032e61e66"
                     },
                     "required_dependencies": [],
-                    "size": 1867803,
-                    "date_published": "2026-01-25T23:00:51.098766Z"
+                    "size": 1869752,
+                    "date_published": "2026-02-23T22:50:04.696529Z"
                 }
             ]
         },
