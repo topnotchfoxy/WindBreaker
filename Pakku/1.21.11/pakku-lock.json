@@ -64,26 +64,26 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "bbe-1.3.0-rc.2+1.21.11.jar",
+                    "file_name": "bbe-1.3.0+1.21.11.jar",
                     "mc_versions": [
                         "1.21.11"
                     ],
                     "loaders": [
                         "fabric"
                     ],
-                    "release_type": "beta",
-                    "url": "https://cdn.modrinth.com/data/ONZm0H7Y/versions/6wjGquEh/bbe-1.3.0-rc.2+1.21.11.jar",
-                    "id": "6wjGquEh",
+                    "release_type": "release",
+                    "url": "https://cdn.modrinth.com/data/ONZm0H7Y/versions/POqeY8nL/bbe-1.3.0+1.21.11.jar",
+                    "id": "POqeY8nL",
                     "parent_id": "ONZm0H7Y",
                     "hashes": {
-                        "sha512": "58dbe206c33191a2f742c25070b04337718fffcfa2c290143f0acbaca6db7aaa65c83731dc2756ae5d5d4f80afbc51381e8552b7f9055bcd803e0efd07fb74f5",
-                        "sha1": "aba98d36e790bd9c9f117c731ca0fc76874079c9"
+                        "sha512": "66c4f43d6a003064ecf3c6febdc682aba0c18b40ecb635ba204bed857f3fa4e2397c0f61a25f6edb6f17f814796bb8acdd3eb170b4123637b7ac6d5525b0a472",
+                        "sha1": "5183aaa17cfa49d8ddef2ce9fb77827929f07dc9"
                     },
                     "required_dependencies": [
                         "AANobbMI"
                     ],
-                    "size": 130737,
-                    "date_published": "2026-01-25T18:15:33.077588Z"
+                    "size": 167896,
+                    "date_published": "2026-02-27T00:12:56.053432Z"
                 }
             ]
         },
@@ -103,7 +103,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "c2me-fabric-mc1.21.11-0.3.7+alpha.0.7.jar",
+                    "file_name": "c2me-fabric-mc1.21.11-0.3.7+alpha.0.9.jar",
                     "mc_versions": [
                         "1.21.11"
                     ],
@@ -111,16 +111,16 @@
                         "fabric"
                     ],
                     "release_type": "alpha",
-                    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/QdLiMUjx/c2me-fabric-mc1.21.11-0.3.7+alpha.0.7.jar",
-                    "id": "QdLiMUjx",
+                    "url": "https://cdn.modrinth.com/data/VSNURh3q/versions/vsiqVtu6/c2me-fabric-mc1.21.11-0.3.7+alpha.0.9.jar",
+                    "id": "vsiqVtu6",
                     "parent_id": "VSNURh3q",
                     "hashes": {
-                        "sha512": "f9543febe2d649a82acd6d5b66189b6a3d820cf24aa503ba493fdb3bbd4e52e30912c4c763fe50006f9a46947ae8cd737d420838c61b93429542573ed67f958e",
-                        "sha1": "dfbcbbd89047e312626e83efdf057956ff1e1017"
+                        "sha512": "b2f92ef8a6dc7473305211c43dd54d509cb8a0dc2bbbd89e9267efb35b0a9871d0bb1a9b3c3e5c349bafa1a60567915e19f50d2b58bb90608556f93b290d72f6",
+                        "sha1": "8ba48c81c03c5287b7dd1e39e66603c64a1bf3a0"
                     },
                     "required_dependencies": [],
-                    "size": 4688603,
-                    "date_published": "2026-01-24T12:38:38.375770Z"
+                    "size": 4687577,
+                    "date_published": "2026-03-01T04:16:07.905402Z"
                 }
             ]
         },
@@ -374,7 +374,7 @@
             "files": [
                 {
                     "type": "modrinth",
-                    "file_name": "lithium-fabric-0.21.3+mc1.21.11.jar",
+                    "file_name": "lithium-fabric-0.21.4+mc1.21.11.jar",
                     "mc_versions": [
                         "1.21.11"
                     ],
@@ -383,16 +383,16 @@
                         "quilt"
                     ],
                     "release_type": "release",
-                    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/qvNsoO3l/lithium-fabric-0.21.3+mc1.21.11.jar",
-                    "id": "qvNsoO3l",
+                    "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/Ow7wA0kG/lithium-fabric-0.21.4+mc1.21.11.jar",
+                    "id": "Ow7wA0kG",
                     "parent_id": "gvQqBUqZ",
                     "hashes": {
-                        "sha512": "2883739303f0bb602d3797cc601ed86ce6833e5ec313ddce675f3d6af3ee6a40b9b0a06dafe39d308d919669325e95c0aafd08d78c97acd976efde899c7810fd",
-                        "sha1": "7733e091bebe5f68aaa4e13cfb6f1eaf3a192379"
+                        "sha512": "f14a5c3d2fad786347ca25083f902139694f618b7c103947f2fd067a7c5ee88a63e1ef8926f7d693ea79ed7d00f57317bae77ef9c2d630bf5ed01ac97a752b94",
+                        "sha1": "203bdcb26e97b3217b045e1182651a7d7b6462ec"
                     },
                     "required_dependencies": [],
-                    "size": 888874,
-                    "date_published": "2026-02-07T01:19:41.863308Z"
+                    "size": 900462,
+                    "date_published": "2026-03-11T00:39:03.618667Z"
                 }
             ]
         },
@@ -543,8 +543,7 @@
                         "1.21.11"
                     ],
                     "loaders": [
-                        "fabric",
-                        "quilt"
+                        "fabric"
                     ],
                     "release_type": "release",
                     "url": "https://cdn.modrinth.com/data/AANobbMI/versions/ZPWbiWXz/sodium-fabric-0.8.6+mc1.21.11.jar",

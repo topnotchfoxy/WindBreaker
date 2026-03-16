@@ -1,6 +1,6 @@
 {
     "name": "WindBreaker_MC1.21.11",
-    "version": "v1.0.2",
+    "version": "v1.0.3",
     "author": "TopNotchFoxy",
     "overrides": ["config", "options.txt"]
 }
