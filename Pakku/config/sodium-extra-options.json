@@ -1,0 +1,8 @@
+{
+    "animation_settings": {
+        "portal": false
+    },
+    "render_settings": {
+        "global_fog": false
+    }
+}
