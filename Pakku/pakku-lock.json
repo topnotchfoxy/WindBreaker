@@ -249,7 +249,7 @@
         {
             "pakku_id": "dGDXNRveMVmoX2o0",
             "type": "MOD",
-            "side": "BOTH",
+            "side": "CLIENT",
             "slug": {
                 "modrinth": "zfastnoise"
             },
@@ -490,7 +490,7 @@
         {
             "pakku_id": "qaTUgZNYU5SAfxSZ",
             "type": "MOD",
-            "side": "BOTH",
+            "side": "CLIENT",
             "slug": {
                 "modrinth": "resourceful-config"
             },
@@ -649,7 +649,7 @@
                 "qaTUgZNYU5SAfxSZ"
             ],
             "type": "MOD",
-            "side": "SERVER",
+            "side": "CLIENT",
             "slug": {
                 "modrinth": "structure-layout-optimizer"
             },
