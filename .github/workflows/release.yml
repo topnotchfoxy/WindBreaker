@@ -45,27 +45,31 @@ jobs:
           files: ./Pakku/build/modrinth/*.mrpack
           loaders: fabric
           game-versions: ${{ env.MC_VERSION }}
-          version: MC${{ env.MC_VERSION}}-${{ env.PACK_VERSION }}
+          version: MC${{ env.MC_VERSION }}-${{ env.PACK_VERSION }}
       - name: Upload to Github Release
         uses: softprops/action-gh-release@v3
         with:
           files: ./Pakku/build/modrinth/*.mrpack
-      - name: Fetch Latest Release Notes
-        id: get_release
+      - name: Update Notify
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          CHANGELOG=$(gh api repos/${{ github.repository }}/releases/latest --jq '.body')
-          
-          echo "changelog<<EOF" >> $GITHUB_OUTPUT
-          echo "# MC${{ env.MC_VERSION}}-${{ env.PACK_VERSION }}" >> $GITHUB_OUTPUT
-          echo "$CHANGELOG" >> $GITHUB_OUTPUT
-          echo
-          echo "Modrinth: https://modrinth.com/modpack/Er2bMzL7/version/MC${{ env.MC_VERSION}}-${{ env.PACK_VERSION }}" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-      - name: Update Notify
-        run: |
-          curl -X POST https://discord.com/api/v9/channels/1474244507280347136/messages -H 'Content-Type: application/json' -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' -d '{"content": "${{ steps.get_release.outputs.changelog }}", "flags": 4}'
-          curl -X POST https://discord.com/api/v9/channels/1522013171320361020/messages -H 'Content-Type: application/json' -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' -d '{"content": "${{ steps.get_release.outputs.changelog }}", "flags": 4}'
-          curl -X POST https://discord.com/api/v9/channels/1474246026222374993/messages -H 'Content-Type: application/json' -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' -d '{"content": "${{ steps.get_release.outputs.changelog }}", "flags": 4}'
-          curl -X POST https://discord.com/api/v9/channels/1474245228129947710/messages -H 'Content-Type: application/json' -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' -d '{"content": "${{ steps.get_release.outputs.changelog }}", "flags": 4}'
+          CHANGELOG=$(gh api repos/${{ github.repository }}/releases/latest --jq '.body' | tr -d '\r' | sed ':a;N;$!ba;s/\n/\\n/g')
+          echo "CHANGELOG=# MC${{ env.MC_VERSION }}-${{ env.PACK_VERSION }}\n$CHANGELOG\n\nModrinth: https://modrinth.com/modpack/Er2bMzL7/version/MC${{ env.MC_VERSION }}-${{ env.PACK_VERSION }}" >> $GITHUB_ENV
+
+          curl -X POST https://discord.com/api/v9/channels/1474244507280347136/messages \
+          -H 'Content-Type: application/json' \
+          -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' \
+          -d '{"content": "${{ env.CHANGELOG }}", "flags": 4}'
+          curl -X POST https://discord.com/api/v9/channels/1522013171320361020/messages \
+          -H 'Content-Type: application/json' \
+          -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' \
+          -d '{"content": "${{ env.CHANGELOG }}", "flags": 4}'
+          curl -X POST https://discord.com/api/v9/channels/1474246026222374993/messages \
+          -H 'Content-Type: application/json' \
+          -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' \
+          -d '{"content": "${{ env.CHANGELOG }}", "flags": 4}'
+          curl -X POST https://discord.com/api/v9/channels/1474245228129947710/messages \
+          -H 'Content-Type: application/json' \
+          -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' \
+          -d '{"content": "${{ env.CHANGELOG }}", "flags": 4}'
