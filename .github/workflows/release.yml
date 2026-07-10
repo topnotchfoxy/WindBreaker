@@ -50,25 +50,30 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           files: ./Pakku/build/modrinth/*.mrpack
-      - name: Update Notify
+      - name: Fetch and Format Changelog
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          CHANGELOG=$(gh api repos/${{ github.repository }}/releases/latest --jq '.body' | tr -d '\r' | sed ':a;N;$!ba;s/\n/\\n/g')
-          echo "CHANGELOG=# MC${{ env.MC_VERSION }}-${{ env.PACK_VERSION }}\n$CHANGELOG\n\nModrinth: https://modrinth.com/modpack/Er2bMzL7/version/MC${{ env.MC_VERSION }}-${{ env.PACK_VERSION }}" >> $GITHUB_ENV
+          CHANGELOG=$(gh api repos/${{ github.repository }}/releases/latest --jq '.body' | tr -d '\r' | sed ':a;N;$!ba;s/\n/\\n/g; s/"/\\"/g')
 
+          echo "CHANGELOG=# MC${{ env.MC_VERSION }}-${{ env.PACK_VERSION }}\n$CHANGELOG\n\nModrinth: https://modrinth.com/modpack/Er2bMzL7/version/MC${{ env.MC_VERSION }}-${{ env.PACK_VERSION }}" >> $GITHUB_ENV
+      - name: Send Discord Notifications
+        run: |
           curl -X POST https://discord.com/api/v9/channels/1474244507280347136/messages \
           -H 'Content-Type: application/json' \
           -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' \
           -d '{"content": "${{ env.CHANGELOG }}", "flags": 4}'
+
           curl -X POST https://discord.com/api/v9/channels/1522013171320361020/messages \
           -H 'Content-Type: application/json' \
           -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' \
           -d '{"content": "${{ env.CHANGELOG }}", "flags": 4}'
+
           curl -X POST https://discord.com/api/v9/channels/1474246026222374993/messages \
           -H 'Content-Type: application/json' \
           -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' \
           -d '{"content": "${{ env.CHANGELOG }}", "flags": 4}'
+
           curl -X POST https://discord.com/api/v9/channels/1474245228129947710/messages \
           -H 'Content-Type: application/json' \
           -H 'authorization: ${{ secrets.NOTIFY_TOKEN }}' \
