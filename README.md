@@ -9,6 +9,8 @@
 </ul>
 
 <h3>Recommended JVM Arguments</h3>
+<h4>Java 25 and up</h4>
+<pre><code>-Xms4G -Xmx4G -XX:+UseZGC -XX:+UseCompactObjectHeaders</code></pre>
 <h4>Java 23 and up</h4>
 <pre><code>-Xms4G -Xmx4G -XX:+UseZGC</code></pre>
 <h4>Java 21</h4>
